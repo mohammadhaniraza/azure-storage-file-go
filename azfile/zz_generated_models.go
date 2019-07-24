@@ -58,6 +58,10 @@ type Marker struct {
 	val *string
 }
 
+func (m Marker) GetVal() *string {
+	return m.val
+}
+
 // NotDone returns true if the list enumeration should be started or is not yet complete. Specifically, NotDone returns true
 // for a just-initialized (zero value) Marker indicating that you should make an initial request to get a result portion from
 // the service. NotDone also returns true whenever the service returns an interim result portion. NotDone returns false only
